@@ -18,7 +18,7 @@ body {
         "top-left top-right"
         "button button"
         "bottom-left bottom-right"
-        ". bottom-text";
+        "bottom-text bottom-text";
     gap: 20px;
     text-align: center;
     position: relative;
@@ -97,9 +97,9 @@ body {
         grid-template-areas:
             "top-left"
             "top-right"
-            "button"
             "bottom-left"
             "bottom-right"
+            "button"
             "bottom-text";
     }
 
@@ -121,5 +121,35 @@ body {
     .button {
         font-size: 14px;
         padding: 8px 16px;
+    }
+}
+
+@media (min-width: 769px) {
+    .container {
+        grid-template-areas: 
+            "top-left top-right"
+            "bottom-left bottom-right"
+            "button button"
+            "bottom-text bottom-text";
+    }
+    
+    .box {
+        width: 150px;
+        height: 200px;
+    }
+
+    .text {
+        font-size: 14px;
+        padding: 20px;
+    }
+
+    .text.bottom-text {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    .button {
+        font-size: 15px;
+        padding: 10px 20px;
     }
 }
